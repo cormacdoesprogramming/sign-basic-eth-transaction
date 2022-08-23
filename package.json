@@ -1,4 +1,8 @@
 {
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "web3": "^1.7.5"
+  },
   "name": "sign-basic-eth-transaction",
   "version": "1.0.0",
   "description": "A basic program using web3 js to sign an Ethereum transaction and return the signed transaction rawTransaction property ",
