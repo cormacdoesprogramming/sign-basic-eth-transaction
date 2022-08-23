@@ -23,12 +23,12 @@ This project uses the following environment variables:
 
 - Clone the repository
 ```
-git clone  <git lab template url> <project_name>
+git clone git@github.com:cormacdoesprogramming/sign-basic-eth-transaction.git
 ```
 
 - Install dependencies
 ```
-cd <project_name>
+cd sign-basic-eth-transaction
 npm install
 ```
 
