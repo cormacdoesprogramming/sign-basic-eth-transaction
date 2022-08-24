@@ -62,7 +62,7 @@ The folder structure of this app is explained below:
 
 | Name | Description |
 | ------------------------ | --------------------------------------------------------------------------------------------- |
-| **node_modules**         | Contains all  npm dependencies                                                            |
-| **src**                  | Contains  source code that will be compiled to the dist dir                               |
-| **src**/script.js         | Entry point to the script                                                               |
-| package.json             | Contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)   |
+| **node_modules**         | Contains all  npm dependencies |
+| **src**                  | Contains  source code that will be compiled to the dist dir |
+| **src**/script.js        | Entry point to the script |
+| package.json             | Contains npm dependencies |
