@@ -11,15 +11,21 @@ const privateKey = process.env.TX_PRIVATE_KEY;
 const toAddress = process.env.TX_TO;
 
 const createSignTransaction = async () => {
-    console.log('Creating a transaction from ' + fromAddress + ' to ' + toAddress);
+    console.log('Creating a transaction from ' + fromAddress + ' to ' + toAddress + '...');
+
+    let txData = process.env.TX_DATA;
+
+    if (process.env.PLATFORM_NONCE) {
+        txData = Buffer.from(process.env.PLATFORM_NONCE, 'utf8').toString('hex');
+    }
 
     const transactionConfig = {
         from: fromAddress,
         to: toAddress,
-        chainId: process.env.TX_CHAIN ?? '1',
+        chainId: process.env.TX_CHAIN_ID ?? '1',
         value: process.env.TX_VALUE ?? '0',
         gas: process.env.TX_GAS ?? '2000000',
-        data: Buffer.from(process.env.PLATFORM_NONCE, 'utf8').toString('hex'),
+        data: txData,
         nonce: process.env.TX_NONCE ?? '0'
     }
 
@@ -33,7 +39,7 @@ const createSignTransaction = async () => {
     console.log('Signed Transaction: ');
     console.log(signedTransaction.rawTransaction);
 
-    console.log('done');
+    console.log('Done');
 }
 
 createSignTransaction()

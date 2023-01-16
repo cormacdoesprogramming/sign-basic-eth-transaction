@@ -1,6 +1,6 @@
 # Sign Basic ETH Transaction (with Platform support)
 
-# Environment vars
+# Environment variables
 This project uses the following environment variables:
 
 | Name                          | Description                         | Default Value                                  |
@@ -11,9 +11,10 @@ This project uses the following environment variables:
 |TX_TO | Transaction to ETH address ||
 |TX_CHAIN_ID | Transaction chain id | "1" |
 |TX_VALUE | Transaction value in WEI | "0" |
-|TX_GAS | Transaction gas value | "2000000" |
+|TX_GAS | Transaction gas value | "2000000" |]
+|TX_DATA | Transaction data value ||
 |TX_NONCE | Transaction nonce value | "0" |
-|PLATFORM_NONCE | Transaction platform nonce value ||
+|PLATFORM_NONCE | Transaction Enjin platform nonce value | "0" |
 
 # Pre-requisites
 - Install [Node.js](https://nodejs.org/en/) version 18.7.0
@@ -44,7 +45,18 @@ TX_PRIVATE_KEY=
 TX_TO=
 ```
 
-- Set the PLATFORM_NONCE ENV variable (optional)
+- Set the TX_CHAIN_ID ENV variable
+```
+TX_CHAIN_ID=1 Ethereum Mainnet
+TX_CHAIN_ID=5 Etheruem Goerli
+```
+
+- Set the TX_DATA ENV variable (optional)
+```
+TX_DATA=
+```
+
+- OR set the PLATFORM_NONCE ENV variable (optional)
 ```
 PLATFORM_NONCE=
 ```
